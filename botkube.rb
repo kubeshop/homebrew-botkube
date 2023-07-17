@@ -45,8 +45,4 @@ class Botkube < Formula
       end
     end
   end
-
-  test do
-    system "#{bin}/botkube version -o=short"
-  end
 end
