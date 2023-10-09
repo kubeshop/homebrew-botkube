@@ -5,21 +5,21 @@
 class Botkube < Formula
   desc "Botkube CLI is a command line tool for managing Botkube resources"
   homepage "https://botkube.io"
-  version "1.5.0-rc.2"
+  version "1.5.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/botkube/releases/download/v1.5.0-rc.2/botkube-darwin-amd64", using: CurlDownloadStrategy
-      sha256 "b4bff087359a2c7fa46b4a17ea4897da2f85a922d14b5654c93526861327e70f"
+      url "https://github.com/kubeshop/botkube/releases/download/v1.5.0/botkube-darwin-amd64", using: CurlDownloadStrategy
+      sha256 "012f3069a90fbf610f71e24139daf6b7cc99f7697576c1dd66ffdab3d41c6ddc"
 
       def install
         bin.install "botkube-darwin-amd64" => "botkube"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/kubeshop/botkube/releases/download/v1.5.0-rc.2/botkube-darwin-arm64", using: CurlDownloadStrategy
-      sha256 "069e0539a420e987bdc1627b99398d69f503ce25fad199954690f55d0c59f165"
+      url "https://github.com/kubeshop/botkube/releases/download/v1.5.0/botkube-darwin-arm64", using: CurlDownloadStrategy
+      sha256 "f36460a8c0c72666b41f98b98b2f8299179fb387adb634cf8dc10606ae8569dd"
 
       def install
         bin.install "botkube-darwin-arm64" => "botkube"
@@ -29,16 +29,16 @@ class Botkube < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/kubeshop/botkube/releases/download/v1.5.0-rc.2/botkube-linux-amd64", using: CurlDownloadStrategy
-      sha256 "6a8d0b51f92ad7708dbb0270799b66379404d498e0b0a09eca15bc3ff039f54a"
+      url "https://github.com/kubeshop/botkube/releases/download/v1.5.0/botkube-linux-amd64", using: CurlDownloadStrategy
+      sha256 "04ee2c483e83d8faffed0a43e040ecd9f1d86dda493e5d713245155e3869e940"
 
       def install
         bin.install "botkube-linux-amd64" => "botkube"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/kubeshop/botkube/releases/download/v1.5.0-rc.2/botkube-linux-arm64", using: CurlDownloadStrategy
-      sha256 "485bb91b0c56bbbc92a25c912561a0bbd4fe7678f465d80d15d21d8b0e1c6927"
+      url "https://github.com/kubeshop/botkube/releases/download/v1.5.0/botkube-linux-arm64", using: CurlDownloadStrategy
+      sha256 "2a34e7b1094d41dce878eb4f92174277b2bce9f97231ae73b61a2d1933c7e2cb"
 
       def install
         bin.install "botkube-linux-arm64" => "botkube"
